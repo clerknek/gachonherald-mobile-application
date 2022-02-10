@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "723945318851",
+    "project_id": "gmservice-d2026",
+    "storage_bucket": "gmservice-d2026.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:723945318851:android:e17684b62fede60f4e3576",
+        "android_client_info": {
+          "package_name": "com.example.flutter_gms"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "723945318851-u6kovcsh3hkkvqal9akgtc5974l6qqgb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhpbRyMwGORg_UQBL_iFmlepjzguQyZmA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "723945318851-u6kovcsh3hkkvqal9akgtc5974l6qqgb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
