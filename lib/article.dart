@@ -4,6 +4,7 @@ import 'package:flutter_gms/setting.dart';
 import 'package:flutter_tts/flutter_tts.dart';
 
 class Article extends StatefulWidget {
+  // 선택한 기사의 정보가 필요하기 때문에 input에 required this.info 추가
   const Article({Key? key, required this.info}) : super(key: key);
   final ArticleInfo info;
 
@@ -11,6 +12,7 @@ class Article extends StatefulWidget {
   _ArticleState createState() => _ArticleState();
 }
 
+// 기본 기사 스타일 지정
 String? articlefontfamily = 'arial';
 double? articletextspace = 1.0;
 double? articletextsize = 30.0;
@@ -18,7 +20,7 @@ Color? articletextcolor = Colors.black87;
 Color? articlebackgroundcolor = Colors.white;
 
 class _ArticleState extends State<Article> {
-
+  // 기사 TTS 세팅
   final FlutterTts tts = FlutterTts();
   _ArticleState() {
     tts.setLanguage('en');
@@ -34,6 +36,7 @@ class _ArticleState extends State<Article> {
 
   @override
   Widget build(BuildContext context) {
+    // 기사의 부제목이 없을 경우를 대비
     var st;
     if (widget.info.subTitle != "") {
       st = Center(
@@ -47,6 +50,7 @@ class _ArticleState extends State<Article> {
       );
     }
 
+    // 기사의 사진이 없을 경우를 대비
     var img;
     if (widget.info.image != "") {
       img = Image.network(
@@ -62,11 +66,13 @@ class _ArticleState extends State<Article> {
       appBar: AppBar(
         title: Text(
           widget.info.title,
+          // 텍스트가 지정된 공간을 넘었을 시 뿌옇게 변하면서 텍스트 자르기
           overflow: TextOverflow.fade,
           style:
               const TextStyle(fontFamily: 'arial', fontWeight: FontWeight.bold),
         ),
         actions: [
+          // 기사 스타일 설정 아이콘 추가
           IconButton(onPressed: () {
             Navigator.push(context, MaterialPageRoute(builder: (_) => const Setting()));
           }, icon: const Icon(Icons.settings))
@@ -75,7 +81,7 @@ class _ArticleState extends State<Article> {
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
-            // title
+            // 기사 제목
             Container(
               color: articlebackgroundcolor,
               child: Center(
@@ -90,13 +96,13 @@ class _ArticleState extends State<Article> {
               ),
               padding: const EdgeInsets.fromLTRB(20, 20, 20, 0),
             ),
-            // subTitle
+            // 기사 부제목
             Container(
               color: articlebackgroundcolor,
               child: st,
               padding: const EdgeInsets.fromLTRB(20, 10, 20, 20),
             ),
-            // reporter & email
+            // 기자 이름 & 이메일 주소
             Container(
                 color: Colors.grey[300],
                 child: Row(children: [
@@ -113,7 +119,7 @@ class _ArticleState extends State<Article> {
                     ),
                   ),
                 ])),
-            // date & time
+            // 기사 쓴 날짜 & 시간
             Container(
               color: Colors.grey[300],
               child: Row(
@@ -132,7 +138,7 @@ class _ArticleState extends State<Article> {
                 ],
               ),
             ),
-            // image & article
+            // 기사 사진 & 내용
             Container(
               color: articlebackgroundcolor,
               child: Column(
@@ -142,8 +148,10 @@ class _ArticleState extends State<Article> {
                       padding: const EdgeInsets.fromLTRB(20, 10, 20, 20)),
                   Container(
                       margin: const EdgeInsets.all(20.0),
+                      // 기사 내용 중에서 선택된 부분을 TTS를 하는 기능을 만들고 싶었기 때문에 Container 대신 선택 가능한 SelectableText를 사용
                       child: SelectableText(
                         widget.info.article,
+                        // 기사 스타일을 설정에서 변경하면 기사 위젯에서도 같이 변경되어야 하기 때문에 처음 선언했던 값으로 지정
                         style: TextStyle(fontFamily: articlefontfamily, fontSize: articletextsize, height: articletextspace, color: articletextcolor),
                         onSelectionChanged: (selections, cause) {
                           speech = widget.info.article
@@ -160,6 +168,7 @@ class _ArticleState extends State<Article> {
         const SizedBox(
           width: 10,
         ),
+        // TTS 재생 버튼
         ElevatedButton(
             onPressed: () {
               if (speech == null) {
@@ -172,6 +181,7 @@ class _ArticleState extends State<Article> {
         const SizedBox(
           width: 5,
         ),
+        // TTS 종료 버튼
         ElevatedButton(
             onPressed: () {
               tts.stop();

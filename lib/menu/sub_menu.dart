@@ -20,6 +20,7 @@ class _SubMenuState extends State<SubMenu> {
       padding: EdgeInsets.zero,
       children: [
         const UserAccountsDrawerHeader(
+          // 사용자의 기본 정보
           currentAccountPicture: CircleAvatar(
               child: Icon(Icons.person), backgroundColor: Colors.white),
           otherAccountsPictures: [
@@ -31,9 +32,12 @@ class _SubMenuState extends State<SubMenu> {
             gradient: LinearGradient(
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
+                // 색깔에 그라데이션을 줌
                 colors: [Colors.blueAccent, Colors.redAccent]),
           ),
         ),
+
+        // 리스트를 섹션과 세부섹션으로 나눠서 섹션 버튼을 누르면 세부섹션이 나오도록 설계
         ExpansionTile(
           leading: const Icon(Icons.school),
           title: const Text('On Campus'),
@@ -115,7 +119,3 @@ class _SubMenuState extends State<SubMenu> {
     );
   }
 }
-
-var session = {
-  'brief': ['dr', 'ar']
-};

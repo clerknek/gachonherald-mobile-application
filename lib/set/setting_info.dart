@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:toggle_switch/toggle_switch.dart';
 import 'package:flutter_gms/setting.dart';
 
 // 글자 크기
@@ -8,11 +9,9 @@ class SliderController {
   double sliderValue;
   SliderController(this.sliderValue);
 }
+
 // 글자 폰트
 var ffList = ['arial', 'calibri', 'enbrush', 'freehand', 'roboto', 'verdana'];
-
-
-// 글자 간격
 
 // 글자 색깔
 double tSSP = 0.0;
@@ -173,7 +172,6 @@ class SettingChangerState extends State<SettingChanger> {
   }
 
   _textShadeChangeHandler(double position) {
-    //handle out of bounds gestures
     if (position > widget.width) position = widget.width;
     if (position < 0) position = 0;
     setState(() {
@@ -248,7 +246,6 @@ class SettingChangerState extends State<SettingChanger> {
   // 배경 색깔
 
   _bgColorChangeHandler(double position) {
-    //handle out of bounds positions
     if (position > widget.width) {
       position = widget.width;
     }
@@ -262,7 +259,6 @@ class SettingChangerState extends State<SettingChanger> {
     });
   }
   _bgShadeChangeHandler(double position) {
-    //handle out of bounds gestures
     if (position > widget.width) position = widget.width;
     if (position < 0) position = 0;
     setState(() {
@@ -400,7 +396,39 @@ class SettingChangerState extends State<SettingChanger> {
             ],
           ),
         ),
-        // 글자 간격
+
+        // 기사 보는 방식
+        ListTile(
+          leading: const Icon(Icons.menu_book_outlined),
+          title: Row(
+            children: [
+              const Text("페이지"),
+              SizedBox(
+                width: MediaQuery.of(context).size.width * 0.05,
+              ),
+              ToggleSwitch(
+                minWidth: MediaQuery.of(context).size.width * 0.25,
+                initialLabelIndex: 0,
+                cornerRadius: 20.0,
+                activeFgColor: Colors.white,
+                inactiveBgColor: Colors.grey,
+                inactiveFgColor: Colors.white,
+                totalSwitches: 2,
+                labels: const ['스크롤', '좌우'],
+                icons: const [
+                  Icons.height,
+                  Icons.arrow_right_alt_sharp,
+                ],
+                activeBgColors: const [
+                  [Colors.blue],
+                  [Colors.pink]
+                ],
+                onToggle: (index) {
+                },
+              ),
+            ],
+          ),
+        ),
 
         // 글자 색깔
         ListTile(
@@ -489,8 +517,6 @@ class SettingChangerState extends State<SettingChanger> {
             onTapDown: (TapDownDetails details) {
               _bgColorChangeHandler(details.localPosition.dx);
             },
-            //This outside padding makes it much easier to grab the   slider because the gesture detector has
-            // the extra padding to recognize gestures inside of
             child: Padding(
               padding: const EdgeInsets.all(15),
               child: Container(
@@ -520,8 +546,6 @@ class SettingChangerState extends State<SettingChanger> {
             onTapDown: (TapDownDetails details) {
               _bgShadeChangeHandler(details.localPosition.dx);
             },
-            //This outside padding makes it much easier to grab the slider because the gesture detector has
-            // the extra padding to recognize gestures inside of
             child: Padding(
               padding: const EdgeInsets.all(15),
               child: Container(

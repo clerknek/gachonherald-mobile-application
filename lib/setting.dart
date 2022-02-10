@@ -9,6 +9,7 @@ class Setting extends StatefulWidget {
   _SettingState createState() => _SettingState();
 }
 
+// setting에서 데이터 가져오기 위한 용도
 String? fF;
 double? fS;
 double? tS;
@@ -52,6 +53,7 @@ class _SettingState extends State<Setting> {
           )),
           Row(
             children: [
+              // 취소를 누를 시 그냥 setting 빠져나가기
               GestureDetector(
                 onTap: () {
                   Navigator.pop(context);
@@ -61,7 +63,7 @@ class _SettingState extends State<Setting> {
                   width: MediaQuery.of(context).size.width * 0.5,
                   alignment: Alignment.center,
                   child: const Text(
-                    "초기화",
+                    "취소",
                     style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
                   ),
                   decoration: BoxDecoration(
@@ -69,7 +71,7 @@ class _SettingState extends State<Setting> {
                       border: Border.all(color: Colors.black87)),
                 ),
               ),
-              // 취소
+              // 해당 기사 세팅을 적용할 시 기사 스타일 데이터를 전부 저장한 후 setting 빠져나가기
               GestureDetector(
                 onTap: () {
                   articlefontfamily = fF;
