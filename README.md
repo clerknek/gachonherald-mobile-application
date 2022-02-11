@@ -62,7 +62,7 @@
 >>>> 
 >>>> ![image](https://user-images.githubusercontent.com/71575861/153525353-af2d84d8-c7fb-40ad-beb8-b722bb5e9ec1.png)
 
->>>> 타일 앞쪽에 ***Image.network()*** 를 이용해 사진을 넣어준다.
+>>>> - 타일 앞쪽에 ***Image.network()*** 를 이용해 사진을 넣어준다.
 >>>> 
 >>>> ![image](https://user-images.githubusercontent.com/71575861/153525447-53e7eb81-eb6a-4e42-b8cb-03ac8c3b5cd7.png)
 
@@ -88,6 +88,13 @@
 
 >> ### 3. Firebase
 >>> ### 3.1. Firebase
+>>>> - 대부분의 서버 기능들을 실제 서버 구성없이 배포가 가능한 수준으로 만들 수 있도록 도와주는 백엔드 서비스
+>>>> - 짧은 시간 안에 백엔드 아키텍처를 구성하고 사용할 수 있도록 도와줌
+>>>> 
+>>>> ![image](https://user-images.githubusercontent.com/71575861/153529156-2b297c80-9365-4138-9ea0-508d14a77ec6.png)
+
+
+
 >>> ### 3.2. Cloud Messaging
 >>> ### 3.3. Authentication
 >> ### 4. article
