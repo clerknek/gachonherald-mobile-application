@@ -10,13 +10,14 @@
 
 > ## 코드
 >> ### 0. 초기 main 설정
+>>> - main.dart
 >>>> - 스마트폰 다크모드 선택에 따라 테마가 면하도록 *darkTheme:* 를 포함했다
 >>>> - menu 폴더를 만든 후 **main_menu.dart**를 만든다.
->>>> 
->>>> ![image](https://user-images.githubusercontent.com/71575861/153521753-7c3572df-38d2-4a96-b1a7-93e88110c592.png)
+
 
 >> ### 1. main menu
->>> + WillPopScope
+>>> + #### WillPopScope
+>>> - main_menu.dart
 >>>> - 스마트폰상 뒤로 가기 버튼을 누를 때 종료 여부를 물어보는 창을 띄우기 위해 ***Scaffold()*** 를 ***WillPopScope()*** 로 감쌌다
 >>>> - 앱을 종료할 때는 flutter 내에 저장되어 있는 **service.dart**를 import 한 후 ***SystemNavigation.pop()*** 을 사용하면 된다.
 >>>> 
@@ -27,8 +28,8 @@
 >>>> 
 >>>> ![image](https://user-images.githubusercontent.com/71575861/153521823-30622034-e1dc-4673-931c-0742ba245f35.png)
 
-
 >>> + ListTile
+>>> - article_data.dart
 >>>> - 기사 리스트를 보여주기에 앞서 샘플 데이터를 저장한다.
 >>>> - data 폴더를 만든 후 그 안에 **article_data.dart**파일을 생성한다.
 >>>> - 다음은 그 안에 있는 데이터와 데이터에 대한 설명이다.
@@ -46,9 +47,12 @@
 >>>> articleList | 기사 내용 | ["In June, there was a news story about an internet lecturer fabricating comments…"]
 >>>> imageList | 기사에 포함된 사진(url형식) | ['http://www.gachonherald.com/news/photo/201909/803_2691_349.jpeg']
 
+>>> - article_info.dart
 >>>> - redirecting constructor를 통해 ArticleInfo class를 만든다.
 >>>> - for 구문과 ArticleInfo를 이용해 **article_data.dart** 에서 데이터를 불러와 List 형식으로 만든다.
 
+>>> - main_menu.dart
+>>>> - ***makeRowItem()*** 을 생성한 후 리스트 칸에 들어갈 내용과 디자인 코드를 적는다
 
 
 >> ### 2. sub menu
