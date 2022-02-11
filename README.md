@@ -196,18 +196,28 @@
 >>>> ![image](https://user-images.githubusercontent.com/71575861/153538968-10d6f6d0-0736-490e-8015-6f6be808edfd.png)
 
 
-
-
-
-
-
-
-
-
-
 >> ### 4. article
 >>> ### 4.1. Article
+>>>> - #### main_menu.dart
+>>>> - 메인 메뉴에서 기사를 눌렀을 경우 해당 데이터를 가지고 ***Article()*** 로 이동하도록 수정한다.
+
+>>>> - #### article.dart
+>>>> - ***Article()*** 을 만든 후 info 데이터 받기
+>>>> ![image](https://user-images.githubusercontent.com/71575861/153539760-c714dd91-3517-40d5-9437-2f929ead7892.png)
+>>>> 
+>>>> - ***Article()*** 꾸미기
+>>>> ![image](https://user-images.githubusercontent.com/71575861/153539836-c866be4d-492b-4421-8d1e-8352571ec9c6.png)
+
 >>> ### 4.2. TTS
+>>>> - flutter의 패키지를 이용하면 선택한 기사를 읽어주는 TTS 서비스를 만들 수 있다.
+>>>> - 필요한 패키지
+>>>>> - flutter_tts: https://pub.dev/packages/flutter_tts
+>>>> - 기사내용에서 선택한 부분을 speech에 저장한 후 하단 바의 시작 버튼을 누르면 그 내용을 말하게끔 한다.
+>>>> https://user-images.githubusercontent.com/71575861/153540316-b6956c1d-3c5e-45c0-a9a0-1a595e309450.mp4
+
+
+
+
 >>> ### 4.3. Setting
 >> ### 5. Search
 > ## 부족한 점
