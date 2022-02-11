@@ -212,14 +212,52 @@
 >>>> - flutter의 패키지를 이용하면 선택한 기사를 읽어주는 TTS 서비스를 만들 수 있다.
 >>>> - 필요한 패키지
 >>>>> - flutter_tts: https://pub.dev/packages/flutter_tts
->>>> - 기사내용에서 선택한 부분을 speech에 저장한 후 하단 바의 시작 버튼을 누르면 그 내용을 말하게끔 한다.
+>>>> - 기사내용에서 선택한 부분을 speech에 저장한 후 하단 바의 시작 버튼을 누르면 그 내용을 말하게끔 한다.  
 >>>> https://user-images.githubusercontent.com/71575861/153540316-b6956c1d-3c5e-45c0-a9a0-1a595e309450.mp4
 
-
-
-
 >>> ### 4.3. Setting
+>>>> ### - text font
+>>>> - dropdown 기능을 이용해 글자의 폰트를 선택할 수 있게끔 한다.
+>>>> - fontFamily를 사용해 원하는 폰트를 저장한다.
+>>>> ![image](https://user-images.githubusercontent.com/71575861/153540490-d2c17c83-29ac-456c-a88b-dc4cea9a1f36.png)
+
+>>>> ### - text size
+>>>> - slider 기능을 이용해 글자 크기가 변경되는 기능을 한다.
+>>>> ![image](https://user-images.githubusercontent.com/71575861/153540556-1fd49606-b6cc-499c-933b-bb7e3219cc3b.png)
+>>>> 
+>>>> ![image](https://user-images.githubusercontent.com/71575861/153540586-03dc2a24-5954-42f6-974c-ebeef688d6e6.png)
+
+>>>> ### - text color
+>>>> - Slider를 이용해 글자 색이 변하는 기능을 만든다.
+>>>> - 색깔을 ARGB를 이용해 List로 저장 한다.
+>>>> - 글자 색과 글자 음영을 선언한다.
+>>>> ![image](https://user-images.githubusercontent.com/71575861/153540774-9c159d65-7838-4855-82f2-56d5a4e18765.png)
+>>>> 
+>>>> - Slider 위치가 바뀔 때 마다 실시간으로 글자 색이 변하는 것을 볼 수 있게 끔 만들기
+>>>> - 같은 방식으로 배경 색 또한 변경할 수 있도록 만든다.
+>>>> 
+>>>> - 자세한 코드 설명은 밑 링크에서 확인
+>>>> 링크: https://medium.com/@mhstoller.it/how-i-made-a-custom-color-picker-slider-using-flutter-and-dart-e2350ec693a1
+>>>> ![image](https://user-images.githubusercontent.com/71575861/153540836-4845f7c8-d9de-4201-9b33-377a57a545bb.png)
+
+>>>> ### - 최종 화면
+>>>> ![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/71575861/153540878-4ff16150-c298-420c-b062-80dabeb8617d.gif)
+
+
 >> ### 5. Search
+>>>> - 검색 아이콘을 이용해 원하는 기사를 찾을 수 있는 기능을 만든다.
+>>>> - 검색한 결과는 검색 내역으로 남기고 검색 내역을 삭제하는 기능도 추가한다.
+>>>> ![image](https://user-images.githubusercontent.com/71575861/153540991-d163aaa6-5c88-4fe9-9e70-02beb792485d.png)
+>>>> 
+>>>> ![image](https://user-images.githubusercontent.com/71575861/153541004-df69e853-b8d4-4200-b629-1e2ac6824189.png)
+
+>>>> ### - 최종 화면
+>>>> 
+
+
+
+
+
 > ## 부족한 점
 
 
