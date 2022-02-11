@@ -93,6 +93,9 @@
 >>>> 
 >>>> ![image](https://user-images.githubusercontent.com/71575861/153529156-2b297c80-9365-4138-9ea0-508d14a77ec6.png)
 
+>>>> ### - 연동하기
+>>>> ① https://console.firebase.google.com/u/0/ 로 이동하여 프로젝트 추가를 누른 후 프로젝트 이름과 기초 설정을 선택한 후 프로젝트를 생성한다.   
+>>>> ![image](https://user-images.githubusercontent.com/71575861/153532164-45baf6c0-6759-4462-96f2-c9d0c2a1f34f.png)
 
 
 >>> ### 3.2. Cloud Messaging
