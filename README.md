@@ -3,7 +3,9 @@
 A new Flutter project.
 
 > ## 목적
-> 
+> - 대학생들의 영자신문 접근성 강화
+> - 독자들의 쉬운 피드백
+
 > ## 코드
 >> ### 1. main menu
 >>> + WillPopScope
