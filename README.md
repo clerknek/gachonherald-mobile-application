@@ -252,23 +252,15 @@
 >>>> ![image](https://user-images.githubusercontent.com/71575861/153541004-df69e853-b8d4-4200-b629-1e2ac6824189.png)
 
 >>>> ### - 최종 화면
->>>> 
-
-
-
+>>>> ![ezgif com-gif-maker (2)-min](https://user-images.githubusercontent.com/71575861/153541461-081345cf-a617-4daa-97fb-794b21046de1.gif)
 
 
 > ## 부족한 점
-
-
----------------------------------------------------------
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+>>>> - 해당 웹사이트의 데이터를 실시간으로 업데이트를 할 수 없는 점 (article)
+>>>> - 사용자 정보를 보여주지 못한 점 (subtitle)
+>>>> - 기사 테마를 저장하지 못하는 점 & 실시간으로 적용되지 않는 점 (article, setting)
+>>>> - 섹션 리스트와 검색 리스트를 생성하지 못한 점 (subtitle, search)
+>>>> - 기사를 보는 방식을 변경할 수 있는 기능을 추가하지 못한 점 (article, setting)
+  
+  
+![image](https://user-images.githubusercontent.com/71575861/153541624-028d8ff2-f40c-41da-aaf7-407fe970eb2d.png)
