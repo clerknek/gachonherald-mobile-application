@@ -95,8 +95,39 @@
 
 >>>> ### - 연동하기
 >>>> ① https://console.firebase.google.com/u/0/ 로 이동하여 프로젝트 추가를 누른 후 프로젝트 이름과 기초 설정을 선택한 후 프로젝트를 생성한다.   
->>>> ![image](https://user-images.githubusercontent.com/71575861/153532164-45baf6c0-6759-4462-96f2-c9d0c2a1f34f.png)
+>>>> ![ezgif com-gif-maker](https://user-images.githubusercontent.com/71575861/153532454-65b94e0d-b0f6-4fd9-9922-3267eca2896b.gif)
+>>>> 
+>>>> ② 안드로이드 버튼을 누른다.
+>>>> ![image](https://user-images.githubusercontent.com/71575861/153532733-48d4d17d-b2e9-4d14-a6ee-77b866e3628d.png)
+>>>> 
+>>>> ③ 원하는 플러터 프로젝트 패키지 이름을 android > app > build.gradle에 들어가 찾은 후 입력한다.
+>>>> ![image](https://user-images.githubusercontent.com/71575861/153532574-fa3b81c5-bf9b-4903-8403-e37c06580aa4.png)
+>>>> 
+>>>> ④ google-service.json을 다운로드 한 후 android > app 폴더에 붙여넣기 한다. (이때 파일 이름 ’google-service.json’ 이 정확하게 들어가야 함)
+>>>> ![image](https://user-images.githubusercontent.com/71575861/153532606-9cedc725-2657-4c78-aaf1-d7bf0402ff5c.png)
+>>>> 
+>>>> ⑤ android > build.gradle에 코드 추가
+>>>> ![image](https://user-images.githubusercontent.com/71575861/153532810-3be93025-a13d-46ad-9550-c7395f4b67da.png)
+>>>> 
+>>>> ⑥ android > app > build.gradle에 코드 추가 후 다음 2번 누르면 연동 끝
+>>>> ![image](https://user-images.githubusercontent.com/71575861/153532837-42e3b798-072b-4d9f-96c7-63c7fd5c6829.png)
 
+>>>> ### - android > app > build.gradle 에러 없애기
+>>>> - 사실 저 에러를 없애지 않아도 앱은 돌아가긴 하지만 보기 싫다면 해결하는 방법이 있다.
+>>>> - 문제가 발생하는 이유는 SDK가 설정이 되어 있지 않아 생기는 오류이다.
+>>>> 
+>>>> ① 상단 바에서 File > Project Structure…에 들어간다.
+>>>> ![image](https://user-images.githubusercontent.com/71575861/153533625-c716d025-7f24-4c85-bb7e-bb206323df00.png)
+>>>> 
+>>>> ② Project Setting > Modules > 프로젝트 명 > Dependencies에 들어가 Module SDK를 설정해주고 OK를 누른다.
+>>>> ![image](https://user-images.githubusercontent.com/71575861/153533744-f35a4d4f-58a0-44e8-ab71-1ebeb69f4a0a.png)
+>>>> 
+>>>> ③ API 29부터 대체된 GradleException을 FileNotFoundException으로 바꾸면 에러가 사라진다
+>>>> ![image](https://user-images.githubusercontent.com/71575861/153533704-2f31a0fe-2078-4a87-b032-f3e2567dc2c0.png)
+
+>>>> ### - Firebase 패키지 모음 사이트
+>>>> - https://firebase.flutter.dev/ 에 들어가면 Firebase를 사용 할 때 필요한 flutter 패키지와 그 설명서 링크가 있다.
+>>>> ![image](https://user-images.githubusercontent.com/71575861/153534405-610104af-ed0d-4cb6-8223-4741e861fe74.png)
 
 >>> ### 3.2. Cloud Messaging
 >>> ### 3.3. Authentication
