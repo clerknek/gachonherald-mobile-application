@@ -4,24 +4,26 @@
 ![image](https://user-images.githubusercontent.com/71575861/153518862-748a5761-989b-46e2-8860-bbdfa3edcb52.png)
 
 > # 목차
->> ### [1. main menu ](#1-main-menu)
->>> ### [1.1. WillPopScope ](#11-willpopscope)
->>> ### [1.2. ListTile ](#12-listtile)
->> ### [2. sub menu ](#2-sub-menu)
->>> ### [2.1. DrawerHeader ](#21-drawerheader)
->>> ### [2.2. ExpansionTile ](#22-expansiontile)
->> ### [3. Firebase ](#3-firebase)
->>> ### [3.1. Firebase ](#31-firebase)
->>> ### [3.2. Cloud Messaging ](#32-cloud-messaging)
->>> ### [3.3. Authentication ](#33-authentication)
->> ### [4. article ](#4-article)
->>> ### [4.1. Article ](#41-article)
->>> ### [4.2. TTS ](#42-tts)
->>> ### [4.3. Setting ](#43-setting)
->> ### [5. Search ](#5-search)
-> ## 부족한 점
+> #### - 목적
+>> #### [0. 초기 main 설정 ](#0-초기-main-설정)
+>> #### [1. main menu ](#1-main-menu)
+>>> #### [1.1. WillPopScope ](#11-willpopscope)
+>>> #### [1.2. ListTile ](#12-listtile)
+>> #### [2. sub menu ](#2-sub-menu)
+>>> #### [2.1. DrawerHeader ](#21-drawerheader)
+>>> #### [2.2. ExpansionTile ](#22-expansiontile)
+>> #### [3. Firebase ](#3-firebase)
+>>> #### [3.1. Firebase ](#31-firebase)
+>>> #### [3.2. Cloud Messaging ](#32-cloud-messaging)
+>>> #### [3.3. Authentication ](#33-authentication)
+>> #### [4. article ](#4-article)
+>>> #### [4.1. Article ](#41-article)
+>>> #### [4.2. TTS ](#42-tts)
+>>> #### [4.3. Setting ](#43-setting)
+>> #### [5. Search ](#5-search)
+> #### - 부족한 점
 
-
+-----------------------------------------------------
 
 > ## 목적
 > - 대학생들의 영자신문 접근성 강화
@@ -39,12 +41,10 @@
 >>>> - #### main_menu.dart
 >>>> - 스마트폰상 뒤로 가기 버튼을 누를 때 종료 여부를 물어보는 창을 띄우기 위해 ***Scaffold()*** 를 ***WillPopScope()*** 로 감쌌다.
 >>>> - 앱을 종료할 때는 flutter 내에 저장되어 있는 **service.dart**를 import 한 후 ***SystemNavigation.pop()*** 을 사용하면 된다.
->>>> 
 >>>> ![image](https://user-images.githubusercontent.com/71575861/153521713-03f8e2c3-7c0d-44c1-b193-cf095e39977e.png)
-
+>>>>
 >>>> - ***WillPopScope()*** 의 *child:* 로 들어가 있는 ***Scaffold()*** 에서는 상단 바인 ***Appbar()***, 서브 메뉴를 열 수 있는 ***Drawer()***, 그리고 본문에는 기사 리스트를 보이게 하기 위해 ***ListView()*** 를 사용할 것이기 때문에 각각 *appBar:*, *drawer:*, *body:* 요소에 추가해준다.
->>>> - ***Appbar()*** 에는 타이틀 명과 ***IconButton()*** 을 추가한다.
->>>> 
+>>>> - ***Appbar()*** 에는 타이틀 명과 ***IconButton()*** 을 추가한다. 
 >>>> ![image](https://user-images.githubusercontent.com/71575861/153521823-30622034-e1dc-4673-931c-0742ba245f35.png)
 
 >>> ### 1.2. ListTile
@@ -73,21 +73,17 @@
 >>>> - #### main_menu.dart
 >>>> - ***makeRowItem()*** 을 생성한 후 리스트 칸에 들어갈 내용과 디자인 코드를 적는다.
 >>>> - 리스트의 내용에는 *overflow:* 를 이용해서 텍스트가 특정 줄 수를 넘어가지 않도록 한다.
->>>> 
 >>>> ![image](https://user-images.githubusercontent.com/71575861/153525122-905055a1-b28a-445b-9dd6-bfb8cf36261b.png)
-
+>>>>
 >>>> - **article_info.dart** 에서 데이터를 불러오기 위해 class 밖에서 aInfos를 선언한다.
 >>>> - ***ListView()*** 에 데이터를 넣는다.
->>>> 
 >>>> ![image](https://user-images.githubusercontent.com/71575861/153525353-af2d84d8-c7fb-40ad-beb8-b722bb5e9ec1.png)
-
+>>>>
 >>>> - 타일 앞쪽에 ***Image.network()*** 를 이용해 사진을 넣어준다.
->>>> 
 >>>> ![image](https://user-images.githubusercontent.com/71575861/153525447-53e7eb81-eb6a-4e42-b8cb-03ac8c3b5cd7.png)
-
+>>>>
 >>>> - url에서 이미지를 가지고 올 경우 chrome 디바이스에서는 이미지가 안보인다.
 >>>> - 이 경우 터미널에 들어가 'flutter run -d chrome --web-renderer html'을 입력해서 실행하면 해결이 된다.
->>>> 
 >>>> ![image](https://user-images.githubusercontent.com/71575861/153528259-4c2f110a-2bd0-4f8f-ac15-4dbcd5b0e54e.png)
 
 
@@ -96,20 +92,17 @@
 >>>> - #### sub_menu.dart
 >>>> - 사용자의 정보가 나와있는 탭을 보여주기 위해 ***UserAccountsDrawerHeader()*** 를 이용한다.
 >>>> - ***CircleAvatar()*** 를 통해 원형 탭을 만들어 주고 ***LinearGradient()*** 를 통해 그라데이션을 준다.
->>>> 
 >>>> ![image](https://user-images.githubusercontent.com/71575861/153528603-46be7568-79ce-4ff9-990c-e1ae5d35d54a.png)
 
 >>> ### 2.2. ExpansionTile
 >>>> - Header 아래에 작은 색션을 ***ListTile()*** 를 이용해 나열한다.
 >>>> - 큰 섹션을 만들기 위해 사용자의 터치로 확장이 가능한 타일인 ***ExpansionTile()*** 을 이용해 만든다.
->>>> 
 >>>> ![image](https://user-images.githubusercontent.com/71575861/153528796-da1f8349-d08e-4c37-b907-dcb7ef72bcf2.png)
 
 >> ### 3. Firebase
 >>> ### 3.1. Firebase
 >>>> - 대부분의 서버 기능들을 실제 서버 구성없이 배포가 가능한 수준으로 만들 수 있도록 도와주는 백엔드 서비스이다.
 >>>> - 짧은 시간 안에 백엔드 아키텍처를 구성하고 사용할 수 있도록 도와준다.
->>>> 
 >>>> ![image](https://user-images.githubusercontent.com/71575861/153529156-2b297c80-9365-4138-9ea0-508d14a77ec6.png)
 
 >>>> ### - 연동하기
@@ -156,8 +149,9 @@
 >>>> - firebase_core와 firebase_messaging 그리고 나중에 필요한 FCM 등록 토큰을 print하기 위해 **foundation.dart**을 import 해준다.
 >>>> 
 >>>> - #### main.dart
->>>> - MyApp에서 return 해주는 *home:* 값을 Messaging으로 바꾸고 새로 ***Messaging()*** 을 만든다.
->>>> - Messaging Widget 내용 채우기
+>>>> - MyApp에서 return 해주는 *home:* 값을 새로 만든 ***Messaging()*** 으로 바꾼다.
+>>>> - ***Messaging()*** 내용 채우기
+>>>> ![image](https://user-images.githubusercontent.com/71575861/153538651-b67b10f7-4505-4d9b-b6f3-42b8b96281f8.png)
 >>>> 
 >>>> - FCM 토큰 확인하기
 >>>> ![image](https://user-images.githubusercontent.com/71575861/153536292-c13b8c7a-8dfa-4866-aefe-ad1ea43ab364.png)
@@ -178,6 +172,34 @@
 >>>> ![image](https://user-images.githubusercontent.com/71575861/153536468-f236f67a-00ab-4b94-aba9-46d92d85f15f.png)
 
 >>> ### 3.3. Authentication
+>>>> - Firebase에서 Authentication을 이용하면 로그인 화면을 만들 수 있을 뿐만 아니라 Google, Facebook 등 다양한 추가 제공업체의 로그인 방법을 추가할 수 있다.
+>>>> ![image](https://user-images.githubusercontent.com/71575861/153538380-89ce8d1f-5dd8-4b63-92bb-f0963dcb7f3d.png)
+>>>> - 필요한 패키지
+>>>>> - firebase_auth: https://pub.dev/packages/firebase_auth
+>>>>> - flutterfire_ui: https://pub.dev/packages/flutterfire_ui
+>>>> - #### main.dart
+>>>> - **main.dart**를 수정한다.
+>>>> ![image](https://user-images.githubusercontent.com/71575861/153538726-018e8b1c-c908-4dcd-b955-3f1b4efa3696.png)
+>>>> 
+>>>> - #### main_menu.dart
+>>>> - 로그아웃 버튼을 수정한다
+>>>> ![image](https://user-images.githubusercontent.com/71575861/153538776-e20cfeca-f377-4c3e-b554-f5af12a0327f.png)
+
+>>>> ### - Firebase Authentication와 연결
+>>>> - Firebase에서 Authentication을 누른 후 Sign-in method에 들어가 원하는 로그인 하는 방법을 추가한다.
+>>>> ![image](https://user-images.githubusercontent.com/71575861/153538893-97ffc478-50b1-4470-b7dc-9556d45d9e16.png)
+>>>> 
+>>>> - 이메일/비밀번호 사용 설정 후 저장한다.
+>>>> ![image](https://user-images.githubusercontent.com/71575861/153538949-66d86ace-5d9f-46f0-aee7-8eed319d73d9.png)
+>>>> 
+>>>> - Users 탭에 들어가면 Firebase에서 직접 사용자를 추가하거나 모바일 앱에서 register 버튼을 눌러 추가할 수 있다.
+>>>> ![image](https://user-images.githubusercontent.com/71575861/153538968-10d6f6d0-0736-490e-8015-6f6be808edfd.png)
+
+
+
+
+
+
 
 
 
