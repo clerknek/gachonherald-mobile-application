@@ -14,7 +14,7 @@
 
 >> ### 1. main menu
 >>> + WillPopScope
->>>> 스마트폰상 뒤로 가기 버튼을 누를 때 종료 여부를 물어보는 창을 띄우기 위해 Scaffold를 <span style="color:blue">WillPopScope()</span> 로 감쌌다
+>>>> 스마트폰상 뒤로 가기 버튼을 누를 때 종료 여부를 물어보는 창을 띄우기 위해 Scaffold를 <span style="color:yellow">WillPopScope()</span>로 감쌌다
 >>> + ListTile
 >> ### 2. sub menu
 
