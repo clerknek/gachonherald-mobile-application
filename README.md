@@ -1,6 +1,6 @@
 # Gachon Herald Mobile Service
 
-- slideshare link https://www.slideshare.net/ssuser9313391/gms-251153380
+- slideshare link https://www.slideshare.net/ssuser9313391/gms-251153380  
 <img src="https://img.shields.io/badge/Flutter-02569B?style=flat-square&logo=flutter&logoColor=white"/> <img src="https://img.shields.io/badge/Dart-0175C2?style=flat-square&logo=dart&logoColor=white"/>
 
 
