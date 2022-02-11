@@ -1,4 +1,5 @@
 # Gachon Herald Mobile Service
+![image](https://user-images.githubusercontent.com/71575861/153518862-748a5761-989b-46e2-8860-bbdfa3edcb52.png)
 
 A new Flutter project.
 
