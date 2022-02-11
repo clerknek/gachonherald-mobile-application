@@ -8,11 +8,16 @@ A new Flutter project.
 > - 독자들의 쉬운 피드백
 
 > ## 코드
+>> ### 0. 초기 main 설정
+>>>> - 스마트폰 다크모드 선택에 따라 테마가 면하도록 darkTheme: 를 포함했다
+>>>> - menu 폴더를 만든 후 main_menu.dart를 만든다.
+>>>> ![image](https://user-images.githubusercontent.com/71575861/153519188-9a60e186-9f0e-4fd5-9afb-eeecc68d41a7.png)
+
 >> ### 1. main menu
 >>> + WillPopScope
->>> 
+>>>> 
 >>> + ListTile
->> ### 2. sub menu[++프로젝트(GMS)과정.pdf](https://github.com/jongminjeon/GachonHerald-Mobile-Service/files/8045125/%2B%2B.GMS.pdf)
+>> ### 2. sub menu
 
 >>> + DrawerHeader
 >>> + ExpansionTile
