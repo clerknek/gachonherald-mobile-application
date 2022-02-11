@@ -17,28 +17,41 @@
 
 >> ### 1. main menu
 >>> + WillPopScope
->>>> 스마트폰상 뒤로 가기 버튼을 누를 때 종료 여부를 물어보는 창을 띄우기 위해 ***Scaffold()*** 를 ***WillPopScope()*** 로 감쌌다
->>>> 앱을 종료할 때는 flutter 내에 저장되어 있는 **service.dart**를 import 한 후 ***SystemNavigation.pop()*** 을 사용하면 된다.
+>>>> - 스마트폰상 뒤로 가기 버튼을 누를 때 종료 여부를 물어보는 창을 띄우기 위해 ***Scaffold()*** 를 ***WillPopScope()*** 로 감쌌다
+>>>> - 앱을 종료할 때는 flutter 내에 저장되어 있는 **service.dart**를 import 한 후 ***SystemNavigation.pop()*** 을 사용하면 된다.
 >>>> 
 >>>> ![image](https://user-images.githubusercontent.com/71575861/153521713-03f8e2c3-7c0d-44c1-b193-cf095e39977e.png)
 
->>>> ***WillPopScope()*** 의 *child:* 로 들어가 있는 ***Scaffold()*** 에서는 상단 바인 ***Appbar()***, 서브 메뉴를 열 수 있는 ***Drawer()***, 그리고 본문에는 기사 리스트를 보이게 하기 위해 ***ListView()*** 를 사용할 것이기 때문에 각각 *appBar:*, *drawer:*, *body:* 요소에 추가해준다.
->>>> ***Appbar()*** 에는 타이틀 명과 ***IconButton()*** 을 추가한다
+>>>> - ***WillPopScope()*** 의 *child:* 로 들어가 있는 ***Scaffold()*** 에서는 상단 바인 ***Appbar()***, 서브 메뉴를 열 수 있는 ***Drawer()***, 그리고 본문에는 기사 리스트를 보이게 하기 위해 ***ListView()*** 를 사용할 것이기 때문에 각각 *appBar:*, *drawer:*, *body:* 요소에 추가해준다.
+>>>> - ***Appbar()*** 에는 타이틀 명과 ***IconButton()*** 을 추가한다
 >>>> 
 >>>> ![image](https://user-images.githubusercontent.com/71575861/153521823-30622034-e1dc-4673-931c-0742ba245f35.png)
 
 
 >>> + ListTile
->>>> 기사 리스트를 보여주기에 앞서 샘플 데이터를 저장한다.
->>>> data 폴더를 만든 후 그 안에 article_data.dart파일을 생성한다.
->>>> 다음은 그 안에 있는 데이터와 데이터에 대한 설명이다.
->>>> 전부 var 타입이며 리스트 형식으로 이루어져 있다.
+>>>> - 기사 리스트를 보여주기에 앞서 샘플 데이터를 저장한다.
+>>>> - data 폴더를 만든 후 그 안에 **article_data.dart**파일을 생성한다.
+>>>> - 다음은 그 안에 있는 데이터와 데이터에 대한 설명이다.
+>>>> - 전부 var 타입이며 리스트 형식으로 이루어져 있다.
 >>>> 
->>>> ![image](https://user-images.githubusercontent.com/71575861/153522290-610e2d30-a6c7-4a95-9f4f-4a374a0d6acd.png)
+>>>> 데이터 명 | 데이터 설명 | 데이터 예시
+>>>> ---- | ---- | ----
+>>>> functionList | 기사의 섹션 | ["Book"] 
+>>>> titleList | 기사 제목 | ["Big Brother is Watching You"]
+>>>> subTitleList | 기사 부제목 | ["1984, the prophecy of George Orwell"]
+>>>> reporterList | 기사를 쓴 기자 이름 | ["Jeon Jong-Min"]
+>>>> emailList | 기사를 쓴 기자 이메일 | ["jongmin1701@naver.com"]
+>>>> dateList | 기사 쓴 날짜 | ["2019.09.21"]
+>>>> timeList | 기사 쓴 시간 | ["18:00:48"]
+>>>> articleList | 기사 내용 | ["In June, there was a news story about an internet lecturer fabricating comments…"]
+>>>> imageList | 기사에 포함된 사진(url형식) | ['http://www.gachonherald.com/news/photo/201909/803_2691_349.jpeg']
 
-[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=jongmin1701@naver.com)](https://github.com/jongmin1701@naver.com/github-readme-stats)
+>>>> - redirecting constructor를 통해 ArticleInfo class를 만든다.
+>>>> - for 구문과 ArticleInfo를 이용해 **article_data.dart** 에서 데이터를 불러와 List 형식으로 만든다.
 
->> ### 2. sub menuWillPopScope
+
+
+>> ### 2. sub menu
 >> 
 >>> + DrawerHeader
 >>> + ExpansionTile
