@@ -262,5 +262,6 @@
 >>>> - 섹션 리스트와 검색 리스트를 생성하지 못한 점 (subtitle, search)
 >>>> - 기사를 보는 방식을 변경할 수 있는 기능을 추가하지 못한 점 (article, setting)
   
+------------------------------------------------------------------
   
 ![image](https://user-images.githubusercontent.com/71575861/153541624-028d8ff2-f40c-41da-aaf7-407fe970eb2d.png)
