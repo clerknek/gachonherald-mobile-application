@@ -17,7 +17,7 @@
 
 >> ### 1. main menu
 >>> + #### WillPopScope
->>> - main_menu.dart
+>>>> - #### main_menu.dart
 >>>> - 스마트폰상 뒤로 가기 버튼을 누를 때 종료 여부를 물어보는 창을 띄우기 위해 ***Scaffold()*** 를 ***WillPopScope()*** 로 감쌌다
 >>>> - 앱을 종료할 때는 flutter 내에 저장되어 있는 **service.dart**를 import 한 후 ***SystemNavigation.pop()*** 을 사용하면 된다.
 >>>> 
@@ -28,8 +28,8 @@
 >>>> 
 >>>> ![image](https://user-images.githubusercontent.com/71575861/153521823-30622034-e1dc-4673-931c-0742ba245f35.png)
 
->>> + ListTile
->>> - article_data.dart
+>>> + #### ListTile
+>>>> - #### article_data.dart
 >>>> - 기사 리스트를 보여주기에 앞서 샘플 데이터를 저장한다.
 >>>> - data 폴더를 만든 후 그 안에 **article_data.dart**파일을 생성한다.
 >>>> - 다음은 그 안에 있는 데이터와 데이터에 대한 설명이다.
@@ -47,29 +47,43 @@
 >>>> articleList | 기사 내용 | ["In June, there was a news story about an internet lecturer fabricating comments…"]
 >>>> imageList | 기사에 포함된 사진(url형식) | ['http://www.gachonherald.com/news/photo/201909/803_2691_349.jpeg']
 
->>> - article_info.dart
+>>>> - #### article_info.dart
 >>>> - redirecting constructor를 통해 ArticleInfo class를 만든다.
 >>>> - for 구문과 ArticleInfo를 이용해 **article_data.dart** 에서 데이터를 불러와 List 형식으로 만든다.
 
->>> - main_menu.dart
+>>>> - #### main_menu.dart
 >>>> - ***makeRowItem()*** 을 생성한 후 리스트 칸에 들어갈 내용과 디자인 코드를 적는다
+>>>> - 리스트의 내용에는 *overflow:* 를 이용해서 텍스트가 특정 줄 수를 넘어가지 않도록 한다.
+>>>> 
+>>>> ![image](https://user-images.githubusercontent.com/71575861/153525122-905055a1-b28a-445b-9dd6-bfb8cf36261b.png)
+
+>>>> - **article_info.dart** 에서 데이터를 불러오기 위해 class 밖에서 aInfos를 선언한다.
+>>>> - ***ListView()*** 에 데이터를 넣는다.
+>>>> 
+>>>> ![image](https://user-images.githubusercontent.com/71575861/153525353-af2d84d8-c7fb-40ad-beb8-b722bb5e9ec1.png)
+
+>>>> 타일 앞쪽에 ***Image.network()*** 를 이용해 사진을 넣어준다.
+>>>> 
+>>>> ![image](https://user-images.githubusercontent.com/71575861/153525447-53e7eb81-eb6a-4e42-b8cb-03ac8c3b5cd7.png)
+
 
 
 >> ### 2. sub menu
 >> 
->>> + DrawerHeader
->>> + ExpansionTile
+>>> + #### DrawerHeader
+>>> + #### ExpansionTile
 >> ### 3. Firebase
->>> + Firebase
->>> + Cloud Messaging
->>> + Authentication
+>>> + #### Firebase
+>>> + #### Cloud Messaging
+>>> + #### Authentication
 >> ### 4. article
->>> + Article
->>> + TTS
->>> + Setting
+>>> + #### Article
+>>> + #### TTS
+>>> + #### Setting
 >> ### 5. Search
 > ## 부족한 점
-> 
+
+
 ---------------------------------------------------------
 This project is a starting point for a Flutter application.
 
