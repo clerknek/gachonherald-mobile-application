@@ -1,8 +1,12 @@
-# flutter_gms
+### Gachon Herald Mobile Service
 
 A new Flutter project.
 
-## Getting Started
+> ## 목적
+> 
+> ## 코드
+> 
+> ## 부족한 점
 
 This project is a starting point for a Flutter application.
 
