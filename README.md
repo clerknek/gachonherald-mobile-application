@@ -11,20 +11,20 @@
 > ## 코드
 >> ### 0. 초기 main 설정
 >>> - main.dart
->>>> - 스마트폰 다크모드 선택에 따라 테마가 면하도록 *darkTheme:* 를 포함했다
+>>>> - 스마트폰 다크모드 선택에 따라 테마가 면하도록 *darkTheme:* 를 포함했다.
 >>>> - menu 폴더를 만든 후 **main_menu.dart**를 만든다.
 
 
 >> ### 1. main menu
 >>> ### 1.1. WillPopScope
 >>>> - #### main_menu.dart
->>>> - 스마트폰상 뒤로 가기 버튼을 누를 때 종료 여부를 물어보는 창을 띄우기 위해 ***Scaffold()*** 를 ***WillPopScope()*** 로 감쌌다
+>>>> - 스마트폰상 뒤로 가기 버튼을 누를 때 종료 여부를 물어보는 창을 띄우기 위해 ***Scaffold()*** 를 ***WillPopScope()*** 로 감쌌다.
 >>>> - 앱을 종료할 때는 flutter 내에 저장되어 있는 **service.dart**를 import 한 후 ***SystemNavigation.pop()*** 을 사용하면 된다.
 >>>> 
 >>>> ![image](https://user-images.githubusercontent.com/71575861/153521713-03f8e2c3-7c0d-44c1-b193-cf095e39977e.png)
 
 >>>> - ***WillPopScope()*** 의 *child:* 로 들어가 있는 ***Scaffold()*** 에서는 상단 바인 ***Appbar()***, 서브 메뉴를 열 수 있는 ***Drawer()***, 그리고 본문에는 기사 리스트를 보이게 하기 위해 ***ListView()*** 를 사용할 것이기 때문에 각각 *appBar:*, *drawer:*, *body:* 요소에 추가해준다.
->>>> - ***Appbar()*** 에는 타이틀 명과 ***IconButton()*** 을 추가한다
+>>>> - ***Appbar()*** 에는 타이틀 명과 ***IconButton()*** 을 추가한다.
 >>>> 
 >>>> ![image](https://user-images.githubusercontent.com/71575861/153521823-30622034-e1dc-4673-931c-0742ba245f35.png)
 
@@ -52,7 +52,7 @@
 >>>> - for 구문과 ArticleInfo를 이용해 **article_data.dart** 에서 데이터를 불러와 List 형식으로 만든다.
 
 >>>> - #### main_menu.dart
->>>> - ***makeRowItem()*** 을 생성한 후 리스트 칸에 들어갈 내용과 디자인 코드를 적는다
+>>>> - ***makeRowItem()*** 을 생성한 후 리스트 칸에 들어갈 내용과 디자인 코드를 적는다.
 >>>> - 리스트의 내용에는 *overflow:* 를 이용해서 텍스트가 특정 줄 수를 넘어가지 않도록 한다.
 >>>> 
 >>>> ![image](https://user-images.githubusercontent.com/71575861/153525122-905055a1-b28a-445b-9dd6-bfb8cf36261b.png)
@@ -67,7 +67,7 @@
 >>>> ![image](https://user-images.githubusercontent.com/71575861/153525447-53e7eb81-eb6a-4e42-b8cb-03ac8c3b5cd7.png)
 
 >>>> - url에서 이미지를 가지고 올 경우 chrome 디바이스에서는 이미지가 안보인다.
->>>> - 이 경우 터미널에 들어가 'flutter run -d chrome --web-renderer html'을 입력해서 실행하면 해결이 된다
+>>>> - 이 경우 터미널에 들어가 'flutter run -d chrome --web-renderer html'을 입력해서 실행하면 해결이 된다.
 >>>> 
 >>>> ![image](https://user-images.githubusercontent.com/71575861/153528259-4c2f110a-2bd0-4f8f-ac15-4dbcd5b0e54e.png)
 
@@ -76,7 +76,7 @@
 >>> ### 2.1. DrawerHeader
 >>>> - #### sub_menu.dart
 >>>> - 사용자의 정보가 나와있는 탭을 보여주기 위해 ***UserAccountsDrawerHeader()*** 를 이용한다.
->>>> - ***CircleAvatar()*** 를 통해 원형 탭을 만들어 주고 ***LinearGradient()*** 를 통해 그라데이션을 준다
+>>>> - ***CircleAvatar()*** 를 통해 원형 탭을 만들어 주고 ***LinearGradient()*** 를 통해 그라데이션을 준다.
 >>>> 
 >>>> ![image](https://user-images.githubusercontent.com/71575861/153528603-46be7568-79ce-4ff9-990c-e1ae5d35d54a.png)
 
@@ -88,8 +88,8 @@
 
 >> ### 3. Firebase
 >>> ### 3.1. Firebase
->>>> - 대부분의 서버 기능들을 실제 서버 구성없이 배포가 가능한 수준으로 만들 수 있도록 도와주는 백엔드 서비스
->>>> - 짧은 시간 안에 백엔드 아키텍처를 구성하고 사용할 수 있도록 도와줌
+>>>> - 대부분의 서버 기능들을 실제 서버 구성없이 배포가 가능한 수준으로 만들 수 있도록 도와주는 백엔드 서비스이다.
+>>>> - 짧은 시간 안에 백엔드 아키텍처를 구성하고 사용할 수 있도록 도와준다.
 >>>> 
 >>>> ![image](https://user-images.githubusercontent.com/71575861/153529156-2b297c80-9365-4138-9ea0-508d14a77ec6.png)
 
@@ -130,7 +130,40 @@
 >>>> ![image](https://user-images.githubusercontent.com/71575861/153534405-610104af-ed0d-4cb6-8223-4741e861fe74.png)
 
 >>> ### 3.2. Cloud Messaging
+>>>> - Firebase를 통해 앱 이용자에게 알람을 보낼 수 있는 기능을 구현할 수 있다.
+>>>> - 필요한 패키지
+>>>>> - firebase_core: https://pub.dev/packages/firebase_core
+>>>>> - firebase_messaging: https://pub.dev/packages/firebase_messaging 
+>>>> - firebase_core와 firebase_messaging 그리고 나중에 필요한 FCM 등록 토큰을 print하기 위해 **foundation.dart**을 import 해준다.
+>>>> 
+>>>> - #### main.dart
+>>>> - MyApp에서 return 해주는 *home:* 값을 Messaging으로 바꾸고 새로 ***Messaging()*** 을 만든다.
+>>>> - Messaging Widget 내용 채우기
+>>>> 
+>>>> - FCM 토큰 확인하기
+>>>> ![image](https://user-images.githubusercontent.com/71575861/153536292-c13b8c7a-8dfa-4866-aefe-ad1ea43ab364.png)
+>>>> 
+>>>> - 만약 토큰 출력이 안된다면 android > app > build.gradle에 가서 minSdkVersion을 23, targetSdkVersion을 30으로 바꾼 후 다시 출력
+>>>> ![image](https://user-images.githubusercontent.com/71575861/153536317-6c86d444-5ea6-44ae-b956-796bbe41f6ff.png)
+>>>> 
+>>>> - Firebase 콘솔에서 ‘참여 > Cloud Messaging’에 들어가 ‘Send your first message’ 버튼을 누른다
+>>>> ![image](https://user-images.githubusercontent.com/71575861/153536368-3e08c011-4bba-4abc-ad76-6d357dcd1439.png)
+>>>> 
+>>>> - 알림 제목과 알림 텍스트에 원하는 내용을 입력하고 ‘테스트 메시지 전송’ 버튼을 누른다
+>>>> ![image](https://user-images.githubusercontent.com/71575861/153536392-b299f265-1d00-41cd-afc2-18bee58d3957.png)
+>>>> 
+>>>> - 프로젝트에서 출력했던 FCM 등록 토큰을 추가한다.
+>>>> ![image](https://user-images.githubusercontent.com/71575861/153536426-de382662-d3f8-4549-b868-437f6fd6864a.png)
+>>>> 
+>>>> - 테스트 메시지 출력되는 것을 확인
+>>>> ![image](https://user-images.githubusercontent.com/71575861/153536468-f236f67a-00ab-4b94-aba9-46d92d85f15f.png)
+
 >>> ### 3.3. Authentication
+
+
+
+
+
 >> ### 4. article
 >>> ### 4.1. Article
 >>> ### 4.2. TTS
