@@ -16,7 +16,7 @@
 
 
 >> ### 1. main menu
->>> + #### WillPopScope
+>>> ### 1.1. WillPopScope
 >>>> - #### main_menu.dart
 >>>> - 스마트폰상 뒤로 가기 버튼을 누를 때 종료 여부를 물어보는 창을 띄우기 위해 ***Scaffold()*** 를 ***WillPopScope()*** 로 감쌌다
 >>>> - 앱을 종료할 때는 flutter 내에 저장되어 있는 **service.dart**를 import 한 후 ***SystemNavigation.pop()*** 을 사용하면 된다.
@@ -28,7 +28,7 @@
 >>>> 
 >>>> ![image](https://user-images.githubusercontent.com/71575861/153521823-30622034-e1dc-4673-931c-0742ba245f35.png)
 
->>> + #### ListTile
+>>> ### 1.2. ListTile
 >>>> - #### article_data.dart
 >>>> - 기사 리스트를 보여주기에 앞서 샘플 데이터를 저장한다.
 >>>> - data 폴더를 만든 후 그 안에 **article_data.dart**파일을 생성한다.
@@ -66,20 +66,34 @@
 >>>> 
 >>>> ![image](https://user-images.githubusercontent.com/71575861/153525447-53e7eb81-eb6a-4e42-b8cb-03ac8c3b5cd7.png)
 
+>>>> - url에서 이미지를 가지고 올 경우 chrome 디바이스에서는 이미지가 안보인다.
+>>>> - 이 경우 터미널에 들어가 'flutter run -d chrome --web-renderer html'을 입력해서 실행하면 해결이 된다
+>>>> 
+>>>> ![image](https://user-images.githubusercontent.com/71575861/153528259-4c2f110a-2bd0-4f8f-ac15-4dbcd5b0e54e.png)
 
 
->> ### 2. sub menu
->> 
->>> + #### DrawerHeader
->>> + #### ExpansionTile
+>> ### 2. sub menu 
+>>> ### 2.1. DrawerHeader
+>>>> - #### sub_menu.dart
+>>>> - 사용자의 정보가 나와있는 탭을 보여주기 위해 ***UserAccountsDrawerHeader()*** 를 이용한다.
+>>>> - ***CircleAvatar()*** 를 통해 원형 탭을 만들어 주고 ***LinearGradient()*** 를 통해 그라데이션을 준다
+>>>> 
+>>>> ![image](https://user-images.githubusercontent.com/71575861/153528603-46be7568-79ce-4ff9-990c-e1ae5d35d54a.png)
+
+>>> ### 2.2. ExpansionTile
+>>>> - Header 아래에 작은 색션을 ***ListTile()*** 를 이용해 나열한다.
+>>>> - 큰 섹션을 만들기 위해 사용자의 터치로 확장이 가능한 타일인 ***ExpansionTile()*** 을 이용해 만든다.
+>>>> 
+>>>> ![image](https://user-images.githubusercontent.com/71575861/153528796-da1f8349-d08e-4c37-b907-dcb7ef72bcf2.png)
+
 >> ### 3. Firebase
->>> + #### Firebase
->>> + #### Cloud Messaging
->>> + #### Authentication
+>>> ### 3.1. Firebase
+>>> ### 3.2. Cloud Messaging
+>>> ### 3.3. Authentication
 >> ### 4. article
->>> + #### Article
->>> + #### TTS
->>> + #### Setting
+>>> ### 4.1. Article
+>>> ### 4.2. TTS
+>>> ### 4.3. Setting
 >> ### 5. Search
 > ## 부족한 점
 
